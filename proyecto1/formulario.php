@@ -12,7 +12,7 @@ else $password="";
 </head>
 <body>
     <h1>Login</h1>
-    <form action="index.php" method="GET">
+    <form action="comprueba.php" method="GET">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" value=<?php echo $nombre;?>>
         <br><br>

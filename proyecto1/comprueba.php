@@ -1,4 +1,5 @@
 <?php
+    include "usuarios.php";
     $nombre = $_GET["nombre"];
     $password = $_GET["password"];
     echo $nombre;
@@ -11,5 +12,5 @@
         $es_Admin=false;
     }
 
-    
+    echo "Pasamos a comprueba";
 ?>
