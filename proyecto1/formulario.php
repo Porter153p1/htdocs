@@ -1,8 +1,9 @@
 <?php
-if(isset($_GET["nombre"])) $nombre = $_GET["nombre"];
-else $nombre="";
-if(isset($_GET["password"])) $nombre = $_GET["password"];
-else $password="";
+    if(isset($_GET["name"]))$name = $_GET["name"];
+    else $name="";
+
+    if(isset($_GET["password"])) $password = $_GET["password"];
+    else $password="";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,11 +14,11 @@ else $password="";
 <body>
     <h1>Login</h1>
     <form action="comprueba.php" method="GET">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value=<?php echo $nombre;?>>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name">
         <br><br>
         <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" value=<?php echo $password;?>>
+        <input type="password" id="password" name="password">
         <br><br>
         <button type="submit">Iniciar Sesión</button>
     </form>

@@ -1,16 +1,20 @@
 <?php
     include "usuarios.php";
-    $nombre = $_GET["nombre"];
+    $name = strtolower($_GET["name"]);
     $password = $_GET["password"];
-    echo $nombre;
-    echo $password;
+    $es_Admin = true;
 
-    if($nombre=="pepe"&& $password=="123")
+    if($name==$nameAdmin && $password==$passwordAdmin)
     {
         $es_Admin=true;
     }else{
         $es_Admin=false;
     }
 
-    echo "Pasamos a comprueba";
+    if($es_Admin){
+        
+        header('Location: index.php');
+    }else{
+        header('Location: formulario.php');
+    }
 ?>
