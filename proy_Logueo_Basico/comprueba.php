@@ -4,7 +4,9 @@
     
     $name = strtolower($_GET["name"]);
     $password = $_GET["password"];
-    $es_Admin = true;
+
+    echo $name, "<br>";
+    echo $password, "<br>";
 
     if($name==$nameAdmin && $password==$passwordAdmin)
     {
