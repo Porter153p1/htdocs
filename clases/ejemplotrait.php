@@ -103,11 +103,13 @@
         private function __construct(){}
 
         public static function getSingletonInstance():Singleton{
-            self::$instancia=new Singleton;
+            if(self::$instancia==NULL) self::$instancia=new Singleton;
             return self::$instancia;
-        } 
+        }
     }
 
     $misisngleton= Singleton::getSingletonInstance();
-    var_dump($misisngleton);
+    $misisngleton2= Singleton::getSingletonInstance();
+    echo "<br>Singleton: ";
+    var_dump($misisngleton===$misisngleton2);
 ?>
