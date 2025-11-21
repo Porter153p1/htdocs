@@ -1,0 +1,163 @@
+/* ------------------------------
+   ESTILO GENERAL
+--------------------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f7;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #1a3d7c;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+p, label, legend {
+    font-size: 16px;
+}
+
+/* ------------------------------
+   CONTENEDOR PRINCIPAL
+--------------------------------*/
+form, table, #mapa, canvas {
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* ------------------------------
+   FIELDSETS
+--------------------------------*/
+fieldset {
+    border: 2px solid #1a3d7c;
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffffff;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+legend {
+    font-weight: bold;
+    padding: 5px 10px;
+    background: #1a3d7c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   ENTRADAS Y TEXTAREAS
+--------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ------------------------------
+   BOTONES
+--------------------------------*/
+button {
+    background-color: #1a3d7c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #16346a;
+}
+
+button[type="reset"] {
+    background-color: #999;
+}
+
+button[type="reset"]:hover {
+    background-color: #777;
+}
+
+/* ------------------------------
+   TABLA DE DATOS (procesamiento.php)
+--------------------------------*/
+table {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+}
+
+table th {
+    background-color: #1a3d7c;
+    color: white;
+    padding: 12px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ------------------------------
+   MAPA
+--------------------------------*/
+#mapa {
+    border: 3px solid #1a3d7c;
+    border-radius: 10px;
+    height: 350px;
+}
+
+/* ------------------------------
+   LISTA DE ENLACES
+--------------------------------*/
+ul {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #1a3d7c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}

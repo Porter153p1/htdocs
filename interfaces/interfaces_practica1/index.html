@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 1</title>
+    <link rel="stylesheet" type="text/css" href="estilos_registro.css">
+</head>
+<main>
+    <h1>Registro de Puntos de Intéres (POI)</h1>
+
+    <form action="procesamiento.php" method="POST">
+        <fieldset>
+            <legend>Datos del POI</legend>
+
+            <label>Nombre del POI
+                <input type="text" name="nombre">
+            </label>
+
+            <label>Correo de Contacto
+                <input type="text" name="correo">
+            </label>
+
+            <label>Latitud
+                <input type="number" step="0.0001" name="latitud">
+            </label>
+
+            <label>Longitud
+                <input type="number" step="0.0001" name="longitud">
+            </label>
+
+            <label>Tipo de POI:
+                <select name="tipo">
+                    <option>Museo</option>
+                    <option>Parque</option>
+                    <option>Oficina</option>
+                    <option>Monumento</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Parámetros de Recursos</legend>
+
+            <label>Nivel de Ocupación (0-100):
+                <input type="number" name="ocupacion" id="ocupacion" min="0" max="100" required>
+            </label>
+
+            <label>Capacidad Actual (visual):
+                <meter id="capacidad" min="0" max="100" value="50"></meter>
+            </label>
+            <br>
+            <br>
+            <p>Estado del POI:</p>
+            <label><input type="radio" name="estado" value="Operativo"> Operativo</label><br>
+            <label><input type="radio" name="estado" value="En Mantenimiento"> En Mantenimiento</label><br>
+            <label><input type="radio" name="estado" value="Cerrado"> Cerrado</label>
+            <br>
+            <br>
+            <label>Comentario
+                <textarea name="comentarios" rows="4"></textarea>
+            </label>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+
+    </form>
+</main>
+
+<script>
+    const inputOcupacion = document.getElementById('ocupacion');
+    const meter = document.getElementById('capacidad');
+
+    inputOcupacion.addEventListener('input', () => {
+        let valor = Number(inputOcupacion.value);
+
+        // Limitar entre 0 y 100
+        if (valor < 0) valor = 0;
+        if (valor > 100) valor = 100;
+
+        meter.value = valor;
+    });
+</script>
