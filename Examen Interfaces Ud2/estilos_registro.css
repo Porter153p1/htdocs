@@ -1,0 +1,83 @@
+/* ------------------------------
+   ESTILO GENERAL
+--------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    padding: 20px;
+    color: #303030;
+}
+
+h1 {
+    text-align: center;
+    color: #7d5fa6;
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ------------------------------
+   FIELDSET
+--------------------------------*/
+fieldset {
+    border: 2px solid #9ec5ff;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    background: #9ec5ff;
+    color: #303030;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ------------------------------
+   CONTROLES
+--------------------------------*/
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #cacaca;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* ------------------------------
+   BOTONES
+--------------------------------*/
+button {
+    background-color: #ffc4e1;
+    color: #303030;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #ffb1d6;
+}
+
+button[type="reset"] {
+    background-color: #c6f7d0;
+}
+
+button[type="reset"]:hover {
+    background-color: #aef1bd;
+}

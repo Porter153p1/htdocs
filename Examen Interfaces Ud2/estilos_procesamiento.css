@@ -1,0 +1,85 @@
+/* ------------------------------
+   ESTILO GENERAL
+--------------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    padding: 20px;
+    color: #303030;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #7d5fa6;
+}
+
+/* ------------------------------
+   TABLA
+--------------------------------*/
+table {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+th {
+    background: #9ec5ff;
+    color: #303030;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ------------------------------
+   MAPA
+--------------------------------*/
+#mapa {
+    width: 80%;
+    max-width: 800px;
+    height: 350px;
+    border: 2px solid #FFC4E1;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+/* ------------------------------
+   GRÁFICO
+--------------------------------*/
+canvas {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Botón para volver */
+.volver-contenedor {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-volver {
+    background: #a5c9f5;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.btn-volver:hover {
+    background: #8db9ef;
+    transform: scale(1.05);
+}
+

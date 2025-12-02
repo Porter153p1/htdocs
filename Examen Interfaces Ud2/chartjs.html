@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfico Chart.js - Ejemplo Básico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cargar Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Opcional: hacer que el canvas ocupe un ancho decente */
+        #miGrafico {
+            max-width: 700px;
+            height: 400px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ejemplo de gráfico con Chart.js</h1>
+
+<!-- Canvas donde se dibuja el gráfico -->
+<canvas id="miGrafico"></canvas>
+
+<script>
+    // 1️⃣ Obtener el contexto del canvas
+    const ctx = document.getElementById('miGrafico');
+
+    // 2️⃣ Crear el gráfico
+    const miGrafico = new Chart(ctx, {
+        type: 'bar', // Tipo de gráfico: 'bar', 'line', 'pie', etc.
+        data: {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril'], // Etiquetas del eje X
+            datasets: [{
+                label: 'Temperatura (°C)', // Leyenda del conjunto de datos
+                data: [10, 15, 8, 12],     // Datos a mostrar
+                backgroundColor: [
+                    '#9ec5ff'
+                ],
+                borderColor: '#7d7d7d',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,         // Se adapta al tamaño del canvas
+            plugins: {
+                legend: {
+                    display: true
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

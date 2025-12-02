@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa Leaflet - Ejemplo Básico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <style>
+        /* Estilo del mapa */
+        #mapa {
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            margin: 30px auto;
+            border: 2px solid #7d7d7d;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ejemplo de mapa con Leaflet</h1>
+
+<!-- Div donde se mostrará el mapa -->
+<div id="mapa"></div>
+
+<script>
+    // 1️⃣ Crear el mapa y centrarlo en coordenadas
+    const map = L.map('mapa').setView([40.4168, -3.7038], 6); // Madrid por defecto
+
+    // 2️⃣ Añadir capa de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+    }).addTo(map);
+
+    // 3️⃣ Añadir un marcador
+    const marcador = L.marker([40.4168, -3.7038]).addTo(map);
+    marcador.bindPopup("<b>Madrid</b><br>Coordenadas de ejemplo").openPopup();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilos_registro.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro Meteorológico</title>
+        <meta author="Yo" copyright="el mio">
+    </head>
+    <body>
+        <form action="procesamiento.php" method="POST">
+            <fieldset>
+                <legend>Datos de la Estación</legend>
+                <label>
+                    Nombre de la estación
+                    <input type="name" value="Aqui Nombre" required name="Nombre">
+                </label>
+                <br><br>
+                <label>
+                    Correo del Responsable
+                    <input type="mail" name="Correo">
+                </label>
+                <br><br>
+                <label>
+                    Latitud
+                    <input type="number" max="10" min="1" name="Latitud">
+                </label>
+                <br><br>
+                <label>
+                    Longitud
+                    <input type="number" max="10" min="1" name="Longitud">
+                </label>
+                <br><br>
+                <label>
+                    Tipo de Estación
+                    <select name="Tipo">
+                        <option value="default">Por defecto</option>
+                        <option value="Rural">Rural</option>
+                        <option value="Urbana">Urbana</option>
+                        <option value="Costera">Costera</option>
+                        <option value="Montaña">Montaña</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Parámetros meteorológicos</legend>
+                <label>
+                    Temperatura Actual
+                    <input type="number" name="TempActual">
+                </label>
+                <br><br>
+                <label>
+                    Humedad
+                    <input type="range" name="Humedad">
+                </label>
+                <br><br>
+                <label>
+                    Humedad Actual
+                    <input type="text" name="HumActual">
+                </label>
+                <br><br>
+                <label>
+                    ¿Esta lloviendo?
+                    <select name="lloviendo">
+                        <option value="default">Por defecto</option>
+                        <option value="No">No</option>
+                        <option value="Lluvia débil">Lluvia débil</option>
+                        <option value="Lluvia intensa">Lluvia intensa</option>
+                    </select>
+                </label>
+                <br><br>
+                <label>
+                    Observaciones
+                    <textarea name="Observaciones"></textarea>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Temperatura media año 2025</legend>
+                <label>
+                    1º Trimestre (ºC)
+                    <input type="number" name="Trimestre1">
+                </label>
+                <br><br>
+                <label>
+                    2º Trimestre (ºC)
+                    <input type="number" name="Trimestre2">
+                </label>
+                <br><br>
+                <label>
+                    3º Trimestre (ºC)
+                    <input type="number" name="Trimestre3">
+                </label>
+                <br><br>
+                <label>
+                    4º Trimestre (ºC)
+                    <input type="number" name="Trimestre4">
+                </label>
+            </fieldset>
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
